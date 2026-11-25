@@ -9,12 +9,13 @@ One code point (U+1F41C), so the entry is 1 character under the gate's
 1–16 character limit, however the gate counts it.
 """
 
+import os
 from pathlib import Path
 
 EMOJI = "\U0001F41D"
 
 def main() -> None:
-    out = Path(__file__).resolve().parent / "output" / "entry.txt"
+    out = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")) / "entry.txt"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(EMOJI, encoding="utf-8")
 
