@@ -11,7 +11,7 @@ One code point (U+1F41C), so the entry is 1 character under the gate's
 
 from pathlib import Path
 
-EMOJI = "\U0001F41C"
+EMOJI = "\U0001F41D"
 
 def main() -> None:
     out = Path(__file__).resolve().parent / "output" / "entry.txt"
